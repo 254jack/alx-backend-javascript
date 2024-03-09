@@ -7,25 +7,30 @@ export default async function handleProfileSignup(
   fileName,
 ) {
   const res = [];
+
   try {
     const user = await signUpUser(firstName, lastName);
     res.push({ status: 'fulfilled', value: user });
-  } catch (err) {
+  } catch (signupError) {
     res.push({
       status: 'rejected',
-      value: err.toString(),
+      value: `Signup error: ${signupError.toString()}`,
     });
   }
 
   try {
     const upload = await uploadPhoto(fileName);
     res.push({ status: 'fulfilled', value: upload });
-  } catch (err) {
+  } catch (uploadError) {
     res.push({
       status: 'rejected',
-      value: err.toString(),
+      value: `Photo upload error: ${uploadError.toString()}`,
     });
   }
+  export default async function loadBalancer(chinaDownload, USDownload) {
+  return Promise.race([chinaDownload, USDownload]);
+}
+
 
   return res;
 }
