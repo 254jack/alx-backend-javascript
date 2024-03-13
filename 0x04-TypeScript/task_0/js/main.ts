@@ -40,3 +40,6 @@ for (let i: number = 0; i < studentsList.length; i++) {
 
     tbody.appendChild(row);
 }
+
+
+console.log(student1)
