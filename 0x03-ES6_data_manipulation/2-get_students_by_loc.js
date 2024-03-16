@@ -1,12 +1,11 @@
-// List of students
+// city search filter
 
-const getListStudentIds = (ids) => {
-  if (!Array.isArray(ids)) {
-    return [];
-  }
-  const meids = ids.map((item) => item.id);
+const getStudentsByLocation = (students, city) => {
+  const studentsLocation = students.filter(
+    (student) => student.location === city,
+  );
 
-  return meids;
+  return studentsLocation;
 };
 
-export default getListStudentIds;
+export default getStudentsByLocation;
