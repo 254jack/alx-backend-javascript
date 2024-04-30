@@ -1,6 +1,6 @@
 /**
  * display the message Welcome to Holberton School, what is your name?
- * @author Yidnekachew Bantrga <https://github.com/Yidne21>
+ * @author Jackson Njoroge <https://github.com/254jack>
  */
 process.stdout.write("Welcome to Holberton School, what is your name?\n");
 
